@@ -12,3 +12,23 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const ulEl = document.querySelector('ul');
+
+const imgList = images.map(({url, alt}) => {
+  const img = `<li><img src="${url}" alt="${alt}" width="200"></img></li>`
+  return img;
+} )
+
+ulEl.innerHTML = imgList;
+
+
+
+
+
+
+
+
+
+
