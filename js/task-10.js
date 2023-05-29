@@ -74,27 +74,30 @@ refs.btnCreate.addEventListener('click', createBoxes)
 
 
 function createBoxes() {
-  const inpTxt = Number(refs.input.value);
+  const inptxt = Number(refs.input.value);
   const inpMaxValue = refs.input.max;
-  if(inpTxt > inpMaxValue){
-    alert('Please enter');
-    return;
-  }
-  newBoxesColorDiv(inpTxt);
+ if(inptxt > inpMaxValue){
+  alert('Please select');
+ }
+
+newCreateboxes(inptxt);
 }
 
-function newBoxesColorDiv(inpTxt) {
- 
-  for(let i = 0; i < inpTxt; i += 1){
-    const newBox = document.createElement('div');
-    const size = 30 + i * 10 + 'px';
-    newBox.style.width = size;
-    newBox.style.height = size;
-    newBox.style.marginBottom = '10px';
-    newBox.style.backgroundColor = getRandomHexColor()
-    // obj.push(newBox);
-    refs.box.append(newBox);
-  }
+function newCreateboxes(inptxt){
+const obj = [];
+
+for(let i = 0; i < inptxt; i++){
+  const newBox = document.createElement('div');
+  const size = 30 + i * 10 + 'px';
+  newBox.style.width = size;
+  newBox.style.height = size;
+  newBox.style.marginBottom = '10px';
+  newBox.style.backgroundColor = getRandomHexColor();
+  obj.push(newBox);
+}
+refs.box.append(...obj);
+console.log(...obj);
+
 }
 
 
