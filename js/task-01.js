@@ -1,17 +1,19 @@
-const ulEl = document.querySelector('#categories').children
-console.log(`Number of Categories: ${ulEl.length}`)
-
-
-
+const ulEL = document.querySelector('#categories');
 const liEl = document.querySelectorAll('.item');
 
-const elem = liEl.forEach (item => {
-    const txtchild = item.firstElementChild.textContent;
+console.log(`Number of categories: ${ulEL.children.length}`)
 
-    console.log(`Categories: ${txtchild}`)
-    const elemEl = item.lastElementChild.children;
-    console.log(`Elemments: ${elemEl.length}`)
+
+liEl.forEach(item => {
+    
+    const categoriesTxt = item.firstElementChild.textContent;
+    console.log(`Categories: ${categoriesTxt}`);
+    const elementsValue = item.lastElementChild.children.length;
+    console.log(`Elements: ${elementsValue}`)
+
 })
+
+
 
 
 

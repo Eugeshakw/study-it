@@ -14,14 +14,15 @@ const images = [
 ];
 
 
-const ulEl = document.querySelector('ul');
+const ulImg = document.querySelector('.gallery');
 
-const imgList = images.map(({url, alt}) => {
-  const img = `<li><img src="${url}" alt="${alt}" width="200"></img></li>`
+const imgEl = images.map(({url, alt}) => {
+  const img = `<li><img src="${url}" width="200" alt="${alt}"></img></li>`
+  console.log(img);
   return img;
-} )
+});
 
-ulEl.innerHTML = imgList;
+ulImg.insertAdjacentHTML('beforeend', imgEl);
 
 
 

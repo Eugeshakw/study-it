@@ -1,8 +1,9 @@
-const inpEl = document.querySelector('#name-input');
-const spEL = document.querySelector('#name-output');
+const inpEL = document.getElementById('name-input');
+const spEl = document.getElementById('name-output');
 
-inpEl.addEventListener('input', (item) => { 
- 
-   spEL.textContent = item.currentTarget.value ? item.currentTarget.value : 'Anonymous'
-   
-})
+inpEL.addEventListener('input', (event) => {
+spEl.textContent = event.currentTarget.value ? 
+event.currentTarget.value 
+: spEl.textContent = 'Anonymous'  
+
+});

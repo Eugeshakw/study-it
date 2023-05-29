@@ -1,8 +1,7 @@
-const inpEL = document.querySelector('#font-size-control');
-const spEl = document.querySelector('#text');
+const inpEl = document.getElementById('font-size-control');
+const spTxt = document.getElementById('text');
 
-
-inpEL.addEventListener('input', event => {
-    spEl.style.fontSize = event.currentTarget.value + 'px';
+inpEl.addEventListener('input', (event) => {
+   spTxt.style.fontSize = event.target.value + 'px'; 
 })
 
